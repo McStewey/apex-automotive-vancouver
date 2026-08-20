@@ -44,7 +44,7 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Apex Automotive home"><img src="/apex-logo.png" alt="" /><span>APEX <b>AUTOMOTIVE</b></span></a>
         <button className="menu-button" aria-label="Toggle navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>MENU</button>
-        <nav className={menuOpen ? "open" : ""} aria-label="Primary navigation" onClick={() => setMenuOpen(false)}><a href="/facility">Facility</a><a href="/specialty">Specialty shops</a><a href="/parts">Parts & tire</a><a href="/support">Operator support</a><a href="/economics">Economics</a></nav>
+        <nav className={menuOpen ? "open" : ""} aria-label="Primary navigation" onClick={() => setMenuOpen(false)}><a href="/">Home</a><a href="/facility">Facility</a><a href="/specialty">Specialty shops</a><a href="/parts">Parts & tire</a><a href="/support">Operator support</a><a href="/pricing">Pricing</a></nav>
         <a className="header-cta" href="#apply">Lease a shop <span>↗</span></a>
       </header>
 
@@ -88,9 +88,9 @@ export default function Home() {
         <div className="service-list">{support.map(([title,copy],i) => <article key={title}><span>{String(i+1).padStart(2,"0")}</span><div><h3>{title}</h3><p>{copy}</p></div><b>＋</b></article>)}</div>
       </section>
 
-      <section className="economics" id="economics">
-        <div className="economics-number"><small>STANDARD CUSTOMER LABOR RATE</small><strong>$135<span>/HR</span></strong><p>Built around transparent, standardized billable hours.</p></div>
-        <div className="economics-copy"><p className="section-kicker">A model that rewards the work</p><h2>Build income around skill—not clocked hours.</h2><p>Operators run independent businesses inside the Apex campus. The model is designed so efficient, high-quality work and long-term customer relationships create meaningful upside.</p><ul><li><span>✓</span> Independent company ownership</li><li><span>✓</span> Two owner-operators per shop</li><li><span>✓</span> Standardized billable-hour framework</li><li><span>✓</span> Participation in parts revenue</li></ul><p className="fine-print">Final lease, fee, operating, and compensation terms are provided during qualification and documented in the applicable agreements.</p></div>
+      <section className="economics refined-economics" id="economics">
+        <div className="economics-copy"><p className="section-kicker">Transparent shop pricing</p><h2>Clear numbers.<br/>Meaningful upside.</h2><p>The Apex model uses standardized billable hours and a defined allocation for labor, parts participation, and shop supplies—so operators can understand how productive work translates into business revenue.</p><a className="text-link" href="/pricing">View the complete pricing model <span>↗</span></a></div>
+        <div className="pricing-summary"><article><small>CUSTOMER LABOR RATE</small><strong>$135<em>/billable hr</em></strong><p>Standardized by repair, not limited to clocked time.</p></article><article><small>OPERATOR LABOR SHARE</small><strong>$100<em>/billable hr</em></strong><p>Retained by the independent operator business.</p></article><article><small>PARTS PARTICIPATION</small><strong>10<em>% of list price</em></strong><p>Operator participation on parts used in completed repairs.</p></article></div>
       </section>
 
       <section className="tools revamped-tools"><div className="tools-copy"><p className="section-kicker">Arrive ready to work</p><h2>Bring your skill.<br/><span>Step into a complete shop.</span></h2><p>You bring the personal tools, expertise, and standards that define your work. Apex provides the professional two-bay environment, lifts, shared infrastructure, technology, and operational support that turn that expertise into a business.</p><div className="tools-proof"><div><strong>YOUR SIDE</strong><span>Tools · expertise · partner · customer relationships</span></div><div><strong>APEX PLATFORM</strong><span>Equipped bays · infrastructure · systems · support</span></div></div></div><img src="/mechanic-workstation.png" alt="Master mechanic selecting a tool at a professional workstation"/></section>

@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 export function SubHeader() {
-  return <header className="site-header sub-header"><a className="brand" href="/"><img src="/apex-logo.png" alt=""/><span>APEX <b>AUTOMOTIVE</b></span></a><nav aria-label="Primary navigation"><a href="/facility">Facility</a><a href="/specialty">Specialty shops</a><a href="/parts">Parts & tire</a><a href="/support">Support</a><a href="/economics">Economics</a></nav><a className="header-cta" href="/#apply">Apply <span>↗</span></a></header>;
+  return <header className="site-header sub-header"><a className="brand" href="/"><img src="/apex-logo.png" alt=""/><span>APEX <b>AUTOMOTIVE</b></span></a><nav aria-label="Primary navigation"><a href="/">Home</a><a href="/facility">Facility</a><a href="/specialty">Specialty shops</a><a href="/parts">Parts & tire</a><a href="/support">Support</a><a href="/pricing">Pricing</a></nav><a className="header-cta" href="/#apply">Apply <span>↗</span></a></header>;
 }
 
 export function DetailPage({ eyebrow, title, intro, image, imageAlt, children }: { eyebrow:string; title:string; intro:string; image:string; imageAlt:string; children:ReactNode }) {
