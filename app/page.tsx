@@ -3,10 +3,10 @@
 import { FormEvent, useState } from "react";
 
 const ecosystem = [
-  ["01", "Independent repair shops", "Twenty-five private, two-bay businesses operated by pairs of master mechanics."],
-  ["02", "EV & sensor labs", "Dedicated high-voltage, ADAS, calibration, and advanced diagnostics capabilities."],
-  ["03", "Rapid service lanes", "Two purpose-built oil-change lines designed for high-throughput service."],
-  ["04", "Parts & tire center", "In-house parts logistics, tire equipment, and shared specialty inventory."],
+  ["01", "Independent repair shops", "Twenty-five private, two-bay businesses operated by pairs of master mechanics.", "/operator-partners.png"],
+  ["02", "EV & sensor labs", "Dedicated high-voltage, ADAS, calibration, and advanced diagnostics capabilities.", "/ev-lab.png"],
+  ["03", "Rapid service lanes", "Two purpose-built oil-change lines designed for high-throughput service.", "/rapid-service-lanes.png"],
+  ["04", "Parts & tire center", "In-house parts logistics, tire equipment, and shared specialty inventory.", "/parts-tire-center.png"],
 ];
 
 const support = [
@@ -79,7 +79,7 @@ export default function Home() {
 
       <section className="facility" id="facility">
         <div className="section-head"><div><p className="section-kicker">One building. A complete ecosystem.</p><h2>More capability<br/>under one roof.</h2></div><p>Designed as a modern automotive campus, not a row of disconnected garages. Shared resources create speed, capability, and a stronger experience for every operator.</p></div>
-        <div className="ecosystem-grid">{ecosystem.map(([n,title,copy]) => <article key={n}><span>{n}</span><div className={`eco-icon icon-${n}`} aria-hidden="true"><i/><i/><i/></div><h3>{title}</h3><p>{copy}</p></article>)}</div>
+        <div className="ecosystem-grid">{ecosystem.map(([n,title,copy,image]) => <article key={n}><span>{n}</span><img className="ecosystem-photo" src={image} alt=""/><h3>{title}</h3><p>{copy}</p></article>)}</div>
         <div className="facility-strip"><div><small>LOCATION</small><strong>2300 E 1st St<br/>Vancouver, WA</strong></div><div><small>OPERATING HOURS</small><strong>Monday–Saturday<br/>7:00 AM–7:00 PM</strong></div><div><small>FLEET CAPABILITY</small><strong>Optional 24/7<br/>operator access</strong></div></div>
       </section>
 
@@ -93,7 +93,7 @@ export default function Home() {
         <div className="economics-copy"><p className="section-kicker">A model that rewards the work</p><h2>Build income around skill—not clocked hours.</h2><p>Operators run independent businesses inside the Apex campus. The model is designed so efficient, high-quality work and long-term customer relationships create meaningful upside.</p><ul><li><span>✓</span> Independent company ownership</li><li><span>✓</span> Two owner-operators per shop</li><li><span>✓</span> Standardized billable-hour framework</li><li><span>✓</span> Participation in parts revenue</li></ul><p className="fine-print">Final lease, fee, operating, and compensation terms are provided during qualification and documented in the applicable agreements.</p></div>
       </section>
 
-      <section className="tools"><div><p className="section-kicker">Arrive ready to work</p><h2>Your tools.<br/>Your standards.<br/><span>The rest is here.</span></h2></div><div className="toolbox" aria-hidden="true"><i/><i/><i/><i/><strong>APEX</strong></div></section>
+      <section className="tools revamped-tools"><div className="tools-copy"><p className="section-kicker">Arrive ready to work</p><h2>Bring your skill.<br/><span>Step into a complete shop.</span></h2><p>You bring the personal tools, expertise, and standards that define your work. Apex provides the professional two-bay environment, lifts, shared infrastructure, technology, and operational support that turn that expertise into a business.</p><div className="tools-proof"><div><strong>YOUR SIDE</strong><span>Tools · expertise · partner · customer relationships</span></div><div><strong>APEX PLATFORM</strong><span>Equipped bays · infrastructure · systems · support</span></div></div></div><img src="/mechanic-workstation.png" alt="Master mechanic selecting a tool at a professional workstation"/></section>
 
       <section className="qualification">
         <p className="section-kicker">Who we’re looking for</p><div className="qualification-grid"><h2>Expert mechanics.<br/>Future owners.</h2><div><p>Apex is assembling a founding group of operators who care deeply about technical excellence, customer trust, and building durable local businesses.</p><ul><li>Master-level diagnostic and repair experience</li><li>A trusted operating partner</li><li>Commitment to professional standards</li><li>Readiness to lead customer relationships</li><li>Drive to build an independent company</li></ul></div></div>
